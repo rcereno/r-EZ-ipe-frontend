@@ -4,7 +4,7 @@ function Home() {
     return(
         <section>
             <div class="container-fluid">
-                <h1 class="mt-5">REZIPE</h1>
+                <h1 class="mt-5">r-EZ-ipe</h1>
                 <p>It should be easy right?</p>
             </div>
         </section>
