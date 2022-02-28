@@ -14,19 +14,68 @@ function Recipe() {
     };
 
     return(
+        <body style={{
+            background: "linear-gradient(#F192C4, #9198e5)", 
+            height: '1000px'
+          }}>
         <section>
             
             <div class="container-fluid">
-                <h1 class="mt-5">Recipes</h1>
-                <form method="POST" action="/addRecipe">
+            <h1 style = {{textAlign: "center"}}><span style={{color : 'maroon'}}>Recipes</span></h1>
+                <form method="POST" action="/addIngredient">
                     <div class="input-group justify-content-center">
-                        <div class="input-group-prepend">
-                            <input type="text" name="recipeName" class="form-control" />
-                            <input type="text" name="recipeIngredients" class="form-control" />
-                            <input type="text" name="recipeSteps" class="form-control" />
-                            <input type="submit" value="Send" class="btn btn-primary mb-2" />
+                        <div className="input-group-prepend">
+                            <input type="text" 
+                                placeholder='Input the Recipe Title...'
+                                autoComplete='Off' 
+                                class="form-control" />
+                            </div>
+                           
+
+                        <div className="recipeIngredients"> 
+                            <input type="text" 
+                                placeholder="Input ingredients..."
+                                autoComplete='Off'
+                                class="form-control" />
+                            
+                            </div>
+
+                            
+                            
+                
+                            
+
+                            <div className="recipeSteps"> 
+                            
+                            <input type="text" 
+                                placeholder="Input steps..."
+                                autoComplete='Off'
+                                class="form-control" />
+
+                
+
+                            </div>
+
+                           
+
+
+
+
+
+                            
+                           
                         </div>
-                    </div>
+
+                        &nbsp; 
+
+                        <div classname = "button2">
+                           
+                           <input type="submit" value="Send" class="btnbtn-primarymb-2" classname = "recipesubmit" />
+
+                        </div>
+
+
+                    
                 </form>
 
                 {
@@ -40,6 +89,7 @@ function Recipe() {
                 }
             </div>
         </section>
+        </body>
     );
 }
 

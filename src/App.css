@@ -21,7 +21,7 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: rgb(255, 255, 255);
 }
 
 .App-link {
@@ -36,3 +36,44 @@
     transform: rotate(360deg);
   }
 }
+.input-group-prepend{
+  width: 80%;
+  height: 5%;
+  
+  border-style: inset;
+  border-color: rgb(135, 222, 215);
+
+
+}
+
+.recipeIngredients{
+  width: 80%;
+  height: 95%;
+  
+  border-style: inset;
+  border-color: rgb(122, 230, 167);
+
+}
+
+.recipeSteps{
+  width: 80%;
+  height: 95%;
+  
+  border-style: inset;
+  border-color: rgb(203, 255, 80);
+
+}
+
+
+.btnbtn-primarymb-2{
+  
+  margin: auto;
+  display: block;
+  border-style: outset;
+  width: 80%;
+  height: 95%;
+  
+  
+}
+
+

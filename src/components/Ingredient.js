@@ -14,18 +14,59 @@ function Ingredient() {
     };
 
     return(
+        <body style={{
+            background: "linear-gradient(#F192C4, #9198e5)", 
+            height: '1000px'
+          }}>
+
+       
         <section>
             
+            
+            
             <div class="container-fluid">
-                <h1 class="mt-5">Ingredients</h1>
+
+           
+            <h1 style = {{textAlign: "center"}}><span style={{color : 'maroon'}}>Ingredients</span></h1>
                 <form method="POST" action="/addIngredient">
                     <div class="input-group justify-content-center">
-                        <div class="input-group-prepend">
-                            <input type="text" name="ingredientName" class="form-control" />
-                            <input type="submit" value="Send" class="btn btn-primary mb-2" />
+                        
+                           
+
+                        <div className="recipeIngredients"> 
+                            <input type="text" 
+                                placeholder="Input ingredients..."
+                                autoComplete='Off'
+                                class="form-control" />
+                            
+                            </div>
+                
+                            
+
+                            
+
+                           
+
+
+
+
+
+                            
+                           
                         </div>
-                    </div>
+                        &nbsp; 
+
+                        <div classname = "button">
+                           
+                           <input type="submit" value="Send" class="btnbtn-primarymb-2" />
+
+                        </div>
+
+                        
+                    
                 </form>
+
+                
 
                 {
                 items.map(item => (
@@ -36,8 +77,12 @@ function Ingredient() {
                     </div>       
                 ))
                 }
+
+
             </div>
+           
         </section>
+        </body>
     );
 }
 
