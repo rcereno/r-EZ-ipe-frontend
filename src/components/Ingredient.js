@@ -21,7 +21,7 @@ function Ingredient() {
                 <form method="POST" action="/addIngredient">
                     <div class="input-group justify-content-center">
                         <div class="input-group-prepend">
-                            <input type="text" name="ingredientName" class="form-control" />
+                            <input type="text" name="ingredientName" placeholder = "input ingredients" class="form-control" />
                             <input type="submit" value="Send" class="btn btn-primary mb-2" />
                         </div>
                     </div>
@@ -31,7 +31,7 @@ function Ingredient() {
                 items.map(item => (
                     <div class="row padding">
                         <div class="alert alert-info rounded-pill" role="alert">
-                            <i class="fa fa-user mr-2"></i> <i> Ingredient: {item.ingredients} </i>
+                            <i> Ingredient: {item.ingredients} </i>
                         </div>
                     </div>       
                 ))
