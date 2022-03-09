@@ -14,6 +14,11 @@ function Ingredient() {
     };
 
     return(
+
+        <body style={{
+            background: "linear-gradient(#FFFFFF, #D2B48C)", 
+            height: '1000px'
+          }}>
         <section>
             
             <div class="container-fluid">
@@ -38,6 +43,7 @@ function Ingredient() {
                 }
             </div>
         </section>
+        </body>
     );
 }
 

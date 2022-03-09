@@ -1,18 +1,26 @@
 import React from 'react';
-import logo from '../logo.png';
+import logo from '../image_new.png';
 function Home() {
-    return(
-        <section>
-            
-            <div class="container-fluid">
-                 <body className = "App Header">
-          <img src={logo} alt="logo" width ="500" height = "500"/>
-        
-        </body>
-                {/* <h1 class="mt-5">r-EZ-ipe</h1>
+    return (
+        <body style={{
+            background: "linear-gradient(#FFFFFF, #D2B48C)",
+            height: '1000px'
+
+        }}>
+            <section>
+               
+
+
+                <div class="container-fluid">
+                    
+                        <img src={logo} alt="logo" width="500" height="500" class = "center"/>
+
+                    
+                    {/* <h1 class="mt-5">r-EZ-ipe</h1>
                 <p>It should be easy right?</p> */}
-            </div>
-        </section>
+                </div>
+            </section>
+        </body>
     );
 }
 

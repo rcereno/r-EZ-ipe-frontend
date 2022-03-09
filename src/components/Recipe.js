@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import Ingredient from './Ingredient';
+import {normalize, schema} from 'normalizr';
+
+
 
 function Recipe() {
     useEffect(() => {
@@ -14,12 +17,23 @@ function Recipe() {
         setItems(items);
     };
 
+
+        
+
     return (
         <section>
+        <body style={{
+            background: "linear-gradient( #D2B48C,#FFFFFF)", 
+            height: '4500px'
+            
 
+          }}>
+        
+ 
             <div class="container-fluid">
-                <h1 class="mt-5">Recipes</h1>
-                <h5 class="mt-5"> Browse our recipes or submit your own</h5>
+           
+                <center><h1  class="mt-5">Recipes</h1></center>
+                <center><h5  class="mt-5"> Browse our recipes or submit your own</h5></center>
                 <form method="POST" action="/addRecipe">
                     <div class="input-group justify-content-center">
                         <div class="input-group-prepend">
@@ -64,8 +78,10 @@ function Recipe() {
                     ))
                 }
             </div>
+        
+        </body>
         </section>
-    );
+    );//end of return 
 }
 
 export default Recipe;
