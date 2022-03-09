@@ -44,29 +44,29 @@ function App() {
       </div>
     </Router>
   );
-=======
-import React, { Components } from "react";
-// import Button from "./button.js";
+// =======
+// import React, { Components } from "react";
+// // import Button from "./button.js";
 
-class App extends Components {
-    state = {
-        name: "Vegan"
-    };
-    changeName = () => {
-        this.setState({
-            name: "Vegetarian"
-        });
-    };
-    render() {
-        return (
-            <div>
-                <h1>{name}</h1>
-                <Button name="Change Name" click={this.changeName} />
-            </div>
-        );
-    }
->>>>>>> 13139a7992ae69a7a75cdf39b48eb1cc67b1a5c0
-}
+// class App extends Components {
+//     state = {
+//         name: "Vegan"
+//     };
+//     changeName = () => {
+//         this.setState({
+//             name: "Vegetarian"
+//         });
+//     };
+//     render() {
+//         return (
+//             <div>
+//                 <h1>{name}</h1>
+//                 <Button name="Change Name" click={this.changeName} />
+//             </div>
+//         );
+//     }
+// >>>>>>> 13139a7992ae69a7a75cdf39b48eb1cc67b1a5c0
+// }
 
 
 // import React, {useState, useEffect} from 'react';
@@ -74,7 +74,7 @@ class App extends Components {
 // import Recipes from './components/Recipe';
 // import Axios from 'axios';
 
-function App() {
+// function App() {
     // const [search,setSearch] = useState("vegan");
     // const [recipes, setRecipes] = useState([]);
 
@@ -89,30 +89,30 @@ function App() {
     // const onInputChange = e => {
     //     console.log(e.target.value);
     // }
-    return (
-        <div className = "App">
-            <Header mysearch={search} onInputChange = {onInputChange}/>
-            <div className="container">
-                <Recipes recipes={recipes}/>
-            </div>
-        </div>
-    );
-}
+//     return (
+//         <div className = "App">
+//             <Header mysearch={search} onInputChange = {onInputChange}/>
+//             <div className="container">
+//                 <Recipes recipes={recipes}/>
+//             </div>
+//         </div>
+//     );
+// }
 // export default App;
 
-// function App() {
-//   return (
-//     <Router>
-//       <div className="App">
-//           <Nav />
-//           <Switch>
-//             <Route path="/" exact component={Home} />
-//             <Route path="/recipes" exact component={Recipe} />
-//             <Route path="/ingredients" exact component={Ingredient} />
-//           </Switch>
-//       </div>
-//     </Router>
-//   );
-// }
+function App() {
+  return (
+    <Router>
+      <div className="App">
+          <Nav />
+          <Switch>
+            <Route path="/" exact component={Home} />
+            <Route path="/recipes" exact component={Recipe} />
+            <Route path="/ingredients" exact component={Ingredient} />
+          </Switch>
+      </div>
+    </Router>
+  );
+}
 
 export default App;
