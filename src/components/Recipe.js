@@ -1,5 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import Ingredient from './Ingredient';
+// import Ingredient from './Ingredient';
+import Sidebar from "./Sidebar";
+// import { ProteinBased, lowcalorie, highcalorie} from "./pages/ProteinBased";
+
+// import { Vegan, lowcal, highcal} from "./pages/Vegan";
+
+// import { Vegetarian, lowcalo, highcalo} from "./pages/Vegetarian";
 
 function Recipe() {
     useEffect(() => {
@@ -16,7 +22,7 @@ function Recipe() {
 
     return (
         <section>
-
+            <Sidebar />
             <div class="container-fluid">
                 <h1 class="mt-5">Recipes</h1>
                 <h5 class="mt-5"> Browse our recipes or submit your own</h5>
@@ -30,6 +36,7 @@ function Recipe() {
                             <input type="submit" value="Send" class="btn btn-primary mb-2" />
                         </div>
                     </div>
+    
                 </form>
 
                 {

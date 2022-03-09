@@ -28,6 +28,22 @@
   color: #61dafb;
 }
 
+
+.Sidebar {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.proteinbased,
+.vegan,
+.vegetarian
+{
+  display: flex;
+  margin-left: 260px;
+  font-size: 2rem;
+}
+
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
