@@ -6,7 +6,7 @@ import Recipe from './components/Recipe';
 import Ingredient from './components/Ingredient';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import React, { Components } from "react";
-import Button from "./button.js";
+// import Button from "./button.js";
 
 class App extends Components {
     state = {
