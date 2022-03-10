@@ -6,8 +6,6 @@ import * as AiIcons from "react-icons/ai";
 import { SidebarData } from "./SidebarData";
 import SubMenu from "./SubMenu";
 import { IconContext } from "react-icons/lib";
-// import logo from '../logo.png';
-// import SidebarData from "./SidebarData";
 
 const Nav = styled.div`
 background: #15171c;
