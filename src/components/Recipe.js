@@ -22,7 +22,7 @@ function Recipe() {
 
     return (
         <section>
-            <Sidebar />
+            {/* <Sidebar /> */}
             <div class="container-fluid">
                 <h1 class="mt-5">Recipes</h1>
                 <h5 class="mt-5"> Browse our recipes or submit your own</h5>
@@ -38,6 +38,7 @@ function Recipe() {
                     </div>
     
                 </form>
+                <Sidebar />
 
                 {
                     
