@@ -15,8 +15,13 @@ function Recipe() {
     };
 
     return (
+        <body style={{
+            background: "linear-gradient(#FFFFFF, #D2B48C)",
+            height: '1000px'
+
+        }}>
         <section>
-            <div class="container-fluid">
+            <div class="recipes">
                 <h1 class="mt-5">Recipes</h1>
                 <h5 class="mt-5"> Browse our recipes or submit your own</h5>
                 <form method="POST" action="/addRecipe">
@@ -26,7 +31,9 @@ function Recipe() {
                             <input type="text" name="recipeName" placeholder="Recipe Name" class="form-control" />
                             <input type="text" name="recipeIngredients" placeholder="Ingredients" class="form-control" />
                             <input type="text" name="recipeSteps" placeholder="Steps" class="form-control" />
+                            <input type="text" name="recipeURL" placeholder="Link" class="form-control" />
                             <input type="submit" value="Send" class="btn btn-primary mb-2" />
+
                         </div>
                     </div>
     
@@ -66,6 +73,7 @@ function Recipe() {
                 }
             </div>
         </section>
+        </body>
     );
 }
 

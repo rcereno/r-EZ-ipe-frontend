@@ -52,3 +52,27 @@
     transform: rotate(360deg);
   }
 }
+
+.recipelogo{
+  text-align: center;
+}
+
+.card{
+  text-align: center;
+}
+
+.card-header{
+  text-align: center;
+}
+
+.card-body{
+  text-align: center;
+}
+
+.recipes{
+  text-align: center;
+}
+
+.ingredients{
+  text-align: center;
+}

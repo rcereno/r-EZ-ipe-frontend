@@ -57,7 +57,7 @@ return (
 			style={{ 
 					// float: center,
 					textAlign: "center",
-					marginLeft: "150px",
+					marginLeft: "550px",
 					color: "white" }}
 		>
 			{/* <img src={logo} alt="logo" width ="250" height = "250"/> */}

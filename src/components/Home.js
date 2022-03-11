@@ -2,17 +2,22 @@ import React from 'react';
 import logo from '../logo.png';
 function Home() {
     return(
+        <body style={{
+            background: "linear-gradient(#FFFFFF, #D2B48C)",
+            height: '1000px'
+
+        }}>
+
         <section>
             
-            <div class="container-fluid">
-                 <body className = "App Header">
-          <img src={logo} alt="logo" width ="500" height = "500"/>
+            <div class="recipelogo">
+            <img src={logo} alt="logo" width ="500" height = "500" class = "center"/>
         
-        </body>
                 {/* <h1 class="mt-5">r-EZ-ipe</h1>
                 <p>It should be easy right?</p> */}
             </div>
         </section>
+        </body>
     );
 }
 

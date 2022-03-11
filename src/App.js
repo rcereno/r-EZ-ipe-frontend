@@ -10,6 +10,7 @@ import { ProteinBased } from "./pages/ProteinBased";
 import { Vegan } from "./pages/Vegan";
 import { Vegetarian } from "./pages/Vegetarian";
 
+
 function App() {
   return (
     <Router>
