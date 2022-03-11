@@ -1,7 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import Ingredient from './Ingredient';
-import {normalize, schema} from 'normalizr';
-
 
 
 function Recipe() {
@@ -41,6 +38,7 @@ function Recipe() {
                             <input type="text" name="recipeName" placeholder="Recipe Name" class="form-control" />
                             <input type="text" name="recipeIngredients" placeholder="Ingredients" class="form-control" />
                             <input type="text" name="recipeSteps" placeholder="Steps" class="form-control" />
+                            <input type="text" name="recipeURL" placeholder="Link" class="form-control" />
                             <input type="submit" value="Send" class="btn btn-primary mb-2" />
                         </div>
                     </div>
