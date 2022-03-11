@@ -14,73 +14,34 @@ function Ingredient() {
     };
 
     return(
+
         <body style={{
-            background: "linear-gradient(#F192C4, #9198e5)", 
+            background: "linear-gradient(#FFFFFF, #D2B48C)", 
             height: '1000px'
           }}>
-
-       
         <section>
             
-            
-            
             <div class="container-fluid">
-
-           
-            <h1 style = {{textAlign: "center"}}><span style={{color : 'maroon'}}>Ingredients</span></h1>
-                <form method="POST" action="/addIngredient">
+                <h1 class="mt-5">Ingredients</h1>
+                <form method="GET" action="/ingredients">
                     <div class="input-group justify-content-center">
-                        
-                           
-
-                        <div className="recipeIngredients"> 
-                            <input type="text" 
-                                placeholder="Input ingredients..."
-                                autoComplete='Off'
-                                class="form-control" />
-                            
-                            </div>
-                
-                            
-
-                            
-
-                           
-
-
-
-
-
-                            
-                           
+                        <div class="input-group-prepend">
+                            <input type="text" name="ingredientName" placeholder = "input ingredients" class="form-control" />
+                            <input type="submit" value="Send" class="btn btn-primary mb-2" />
                         </div>
-                        &nbsp; 
-
-                        <div classname = "button">
-                           
-                           <input type="submit" value="Send" class="btnbtn-primarymb-2" />
-
-                        </div>
-
-                        
-                    
+                    </div>
                 </form>
-
-                
 
                 {
                 items.map(item => (
                     <div class="row padding">
                         <div class="alert alert-info rounded-pill" role="alert">
-                            <i class="fa fa-user mr-2"></i> <i> Ingredient: {item.ingredients} </i>
+                            <i> Ingredient: {item.ingredients} </i>
                         </div>
                     </div>       
                 ))
                 }
-
-
             </div>
-           
         </section>
         </body>
     );

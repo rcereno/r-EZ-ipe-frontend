@@ -1,30 +1,25 @@
 import React from 'react';
-
+import logo from '../logo.png';
 function Home() {
-    return(
+    return (
         <body style={{
-            background: "linear-gradient(#87DED7, #F192C4)", 
+            background: "linear-gradient(#FFFFFF, #D2B48C)",
             height: '1000px'
-          }}>
-        
-        <section>
-            
-          
-            <div class="container-fluid">
-            
+
+        }}>
+            <section>
                
 
- 
-     
-      <h1 style = {{textAlign: "center"}}> <span style={{color : 'darkcyan'}}>r</span> <span style={{color : 'hotpink'}}> -EZ-</span> <span style={{color : 'darkcyan'}}>ipe</span></h1>
-                <h2 style = {{textAlign: "center"}}>It should be easy right?</h2>
 
-                
-            </div>
+                <div class="recipeLogo">
+                    
+                        <img src={logo} alt="logo" width="500" height="500" class = "center"/>
 
-            
-           
-        </section>
+                    
+                    {/* <h1 class="mt-5">r-EZ-ipe</h1>
+                <p>It should be easy right?</p> */}
+                </div>
+            </section>
         </body>
     );
 }

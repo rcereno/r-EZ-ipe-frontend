@@ -1,7 +1,11 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
+import Ingredient from './Ingredient';
+
+
+
 
 function Recipe() {
-    useEffect( () => {
+    useEffect(() => {
         fetchItems();
     }, []);
 
@@ -13,84 +17,74 @@ function Recipe() {
         setItems(items);
     };
 
-    return(
-        <body style={{
-            background: "linear-gradient(#F192C4, #9198e5)", 
-            height: '1000px'
-          }}>
+
+        
+
+    return (
         <section>
+        <body style={{
+            background: "linear-gradient( #D2B48C,#FFFFFF)", 
+            height: '4500px'
             
+
+          }}>
+        
+ 
             <div class="container-fluid">
-            <h1 style = {{textAlign: "center"}}><span style={{color : 'maroon'}}>Recipes</span></h1>
-                <form method="POST" action="/addIngredient">
+           
+                <center><h1  class="mt-5">Recipes</h1></center>
+                <center><h5  class="mt-5"> Browse our recipes or submit your own</h5></center>
+                <form method="POST" action="/addRecipe">
                     <div class="input-group justify-content-center">
-                        <div className="input-group-prepend">
-                            <input type="text" 
-                                placeholder='Input the Recipe Title...'
-                                autoComplete='Off' 
-                                class="form-control" />
-                            </div>
-                           
+                        <div class="input-group-prepend">
 
-                        <div className="recipeIngredients"> 
-                            <input type="text" 
-                                placeholder="Input ingredients..."
-                                autoComplete='Off'
-                                class="form-control" />
-                            
-                            </div>
-
-                            
-                            
-                
-                            
-
-                            <div className="recipeSteps"> 
-                            
-                            <input type="text" 
-                                placeholder="Input steps..."
-                                autoComplete='Off'
-                                class="form-control" />
-
-                
-
-                            </div>
-
-                           
-
-
-
-
-
-                            
-                           
+                            <input type="text" name="recipeName" placeholder="Recipe Name" class="form-control" />
+                            <input type="text" name="recipeIngredients" placeholder="Ingredients" class="form-control" />
+                            <input type="text" name="recipeSteps" placeholder="Steps" class="form-control" />
+                            <input type="submit" value="Send" class="btn btn-primary mb-2" />
                         </div>
-
-                        &nbsp; 
-
-                        <div classname = "button2">
-                           
-                           <input type="submit" value="Send" class="btnbtn-primarymb-2" classname = "recipesubmit" />
-
-                        </div>
-
-
-                    
+                    </div>
                 </form>
 
                 {
-                items.map(item => (
-                    <div class="row padding">
-                        <div class="alert alert-info rounded-pill" role="alert">
-                            <i class="fa fa-user mr-2"></i> <i> Recipe for {item.recipe}... ingredients: {item.ingredients}. steps: {item.steps}</i>
+                    
+                    items.map(item => (
+                        <div class="accordion" id="accordionExample">
+                            <div class="card">
+                                <div class="card-header" id="headingOne">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            <i> Recipe for {item.name} </i>
+                                        </button>
+                                    </h2>
+                                </div>
+
+                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <img src={item.imageURL} height="150" width="150" />
+                                        <div> <b>Steps:</b> <li>{item.steps}</li> </div>
+
+
+                                        <div> <b>Ingredients:</b> <li>{item.ingredients.name}</li> </div>
+                                        
+
+
+
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>       
-                ))
+
+                    ))
                 }
             </div>
-        </section>
+        
         </body>
-    );
+        </section>
+    );//end of return 
 }
 
 export default Recipe;
+
+
+// <i class="fa fa-user mr-2"></i> <i> imageURL: {item.imageURL} Recipe for {item.name} ... Steps {item.steps} </i>
