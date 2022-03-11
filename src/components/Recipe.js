@@ -59,7 +59,7 @@ function Recipe() {
                                         <div> <b>Steps:</b> <li>{item.steps}</li> </div>
 
 
-                                        <div> <b>Ingredients:</b> <li>{item.ingredients.name}</li> </div>
+                                        <div> <b>Ingredients:</b> <li>{item.ingredients}</li> </div>
                                         
 
 

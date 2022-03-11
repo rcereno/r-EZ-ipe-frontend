@@ -61,7 +61,7 @@ return (
 					color: "white" }}
 		>
 			{/* <img src={logo} alt="logo" width ="250" height = "250"/> */}
-			Recipe Categories
+			<center>Recipe Categories</center>
 		</h1>
 		</Nav>
 		<SidebarNav sidebar={sidebar}>
