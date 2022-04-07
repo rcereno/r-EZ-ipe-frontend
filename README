@@ -19,3 +19,6 @@ run frontend with:
 npm start
 Update the frontend/package.json with the proxy:
 "proxy": "http://localhost:4000/"
+
+Link to Project Documentation below: 
+https://docs.google.com/document/d/19IegGj02M5nfhb-TfTAfuGDEuY08CCN2YN6JQEPUgq0/edit#
