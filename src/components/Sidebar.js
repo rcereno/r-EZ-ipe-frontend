@@ -8,8 +8,8 @@ import SubMenu from "./SubMenu";
 import { IconContext } from "react-icons/lib";
 
 const Nav = styled.div`
-background: #15171c;
-height: 30px;
+background: #D2B48C;
+height: 45px;
 display: flex;
 justify-content: flex-start;
 align-items: center;
@@ -25,7 +25,7 @@ align-items: center;
 `;
 
 const SidebarNav = styled.nav`
-background: #15171c;
+background: #353A3F;
 width: 250px;
 height: 100vh;
 display: flex;
@@ -57,7 +57,7 @@ return (
 			style={{ 
 					// float: center,
 					textAlign: "center",
-					marginLeft: "550px",
+					marginLeft: "500px",
 					color: "white" }}
 		>
 			{/* <img src={logo} alt="logo" width ="250" height = "250"/> */}

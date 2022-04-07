@@ -12,9 +12,8 @@ function Home() {
             
             <div class="recipelogo">
             <img src={logo} alt="logo" width ="500" height = "500" class = "center"/>
-        
-                {/* <h1 class="mt-5">r-EZ-ipe</h1>
-                <p>It should be easy right?</p> */}
+
+                <h3>Select recipes to browse our collection or to input your own!</h3>
             </div>
         </section>
         </body>
