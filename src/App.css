@@ -36,6 +36,22 @@
 }
 
 
+
+.Sidebar {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.proteinbased,
+.vegan,
+.vegetarian
+{
+  display: flex;
+  margin-left: 260px;
+  font-size: 2rem;
+}
+
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -43,4 +59,28 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.recipelogo{
+  text-align: center;
+}
+
+.card{
+  text-align: center;
+}
+
+.card-header{
+  text-align: center;
+}
+
+.card-body{
+  text-align: center;
+}
+
+.recipes{
+  text-align: center;
+}
+
+.ingredients{
+  text-align: center;
 }

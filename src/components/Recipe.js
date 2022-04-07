@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-
+import Sidebar from "./Sidebar";
 
 function Recipe() {
     useEffect(() => {
@@ -14,23 +14,16 @@ function Recipe() {
         setItems(items);
     };
 
-
-        
-
     return (
-        <section>
         <body style={{
-            background: "linear-gradient( #D2B48C,#FFFFFF)", 
-            height: '4500px'
-            
+            background: "linear-gradient(#FFFFFF, #D2B48C)",
+            height: '1000px'
 
-          }}>
-        
- 
-            <div class="container-fluid">
-           
-                <center><h1  class="mt-5">Recipes</h1></center>
-                <center><h5  class="mt-5"> Browse our recipes or submit your own</h5></center>
+        }}>
+        <section>
+            <div class="recipes">
+                <h1 class="mt-5">Recipes</h1>
+                <h5 class="mt-5"> Browse our recipes or submit your own</h5>
                 <form method="POST" action="/addRecipe">
                     <div class="input-group justify-content-center">
                         <div class="input-group-prepend">
@@ -40,9 +33,12 @@ function Recipe() {
                             <input type="text" name="recipeSteps" placeholder="Steps" class="form-control" />
                             <input type="text" name="recipeURL" placeholder="Link" class="form-control" />
                             <input type="submit" value="Send" class="btn btn-primary mb-2" />
+
                         </div>
                     </div>
+    
                 </form>
+                <Sidebar />
 
                 {
                     
@@ -63,7 +59,7 @@ function Recipe() {
                                         <div> <b>Steps:</b> <li>{item.steps}</li> </div>
 
 
-                                        <div> <b>Ingredients:</b> <li>{item.ingredients.name}</li> </div>
+                                        <div> <b>Ingredients:</b> <li>{item.ingredients}</li> </div>
                                         
 
 
@@ -76,10 +72,9 @@ function Recipe() {
                     ))
                 }
             </div>
-        
-        </body>
         </section>
-    );//end of return 
+        </body>
+    );
 }
 
 export default Recipe;

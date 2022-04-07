@@ -14,14 +14,15 @@ function Ingredient() {
     };
 
     return(
-
         <body style={{
-            background: "linear-gradient(#FFFFFF, #D2B48C)", 
+            background: "linear-gradient(#FFFFFF, #D2B48C)",
             height: '1000px'
-          }}>
+
+        }}>
+
         <section>
             
-            <div class="container-fluid">
+            <div class="ingredients">
                 <h1 class="mt-5">Ingredients</h1>
                 <form method="POST" action="/addIngredient">
                     <div class="input-group justify-content-center">
