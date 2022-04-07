@@ -10,6 +10,7 @@ function Home() {
             <section>
                
 
+<<<<<<< Updated upstream
 
                 <div class="container-fluid">
                     
@@ -20,6 +21,17 @@ function Home() {
                 <p>It should be easy right?</p> */}
                 </div>
             </section>
+=======
+        <section>
+            
+            <div class="recipelogo">
+            <img src={logo} alt="logo" width ="500" height = "500" class = "center"/>
+        
+                /<p class="mt-5">Click Recipes to sort by recipes, sort by categories, or click Ingredients for inputing ingredients. </p>
+               
+            </div>
+        </section>
+>>>>>>> Stashed changes
         </body>
     );
 }
