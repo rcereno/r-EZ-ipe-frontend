@@ -21,6 +21,8 @@ import MoreVertIcon from '@material-ui/icons/MoreVert';
 const useStyles = makeStyles((theme) => ({
     
     root: {
+      width: "50%",
+      marginLeft: "25%",
       borderRadius: 12,
       background: 'linear-gradient(#FFFFFF 30%, #D2B48C 90%)',
     },
@@ -88,7 +90,7 @@ function Recipe() {
                     items.map(item => (
                         <><CardHeader
                             avatar={<Avatar aria-label="recipe" className={classes.avatar}>
-                                R
+                                EZ
                             </Avatar>}
                             action={<IconButton aria-label="settings">
                                 <MoreVertIcon />
