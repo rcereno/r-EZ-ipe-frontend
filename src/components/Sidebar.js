@@ -57,10 +57,11 @@ return (
 			style={{ 
 					// float: center,
 					textAlign: "center",
-					marginLeft: "500px",
+					width: "50%",
+      				marginLeft:"21%",
 					color: "white" }}
 		>
-			{/* <img src={logo} alt="logo" width ="250" height = "250"/> */}
+			{/*<img src={logo} alt="logo" width ="250" height = "250"/> */}
 			<center>Recipe Categories</center>
 		</h1>
 		</Nav>

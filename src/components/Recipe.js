@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
     
     root: {
       width: "50%",
-      marginLeft: "25%",
+      marginLeft:"25%",
       borderRadius: 12,
       background: 'linear-gradient(#FFFFFF 30%, #D2B48C 90%)',
     },
@@ -138,6 +138,3 @@ function Recipe() {
 }
 
 export default Recipe;
-
-
-// <i class="fa fa-user mr-2"></i> <i> imageURL: {item.imageURL} Recipe for {item.name} ... Steps {item.steps} </i>
