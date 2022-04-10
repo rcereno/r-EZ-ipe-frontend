@@ -13,7 +13,7 @@ const images = [
       width: '30%',
     },
     {
-      url: 'https://th.bing.com/th/id/R.4ca63aa621eccdeba88c793449d2726a?rik=DUqzGoyF%2f5rJ6g&riu=http%3a%2f%2fwww.119sou.com%2fwp-content%2fuploads%2f2021%2f01%2fPaleo-Diet-What-Eat-Human-age-Diet.jpg&ehk=CUxbttWZd8DMm%2bNvAHGooDhYAt2udYO00xZQSzKDFxI%3d&risl=&pid=ImgRaw&r=0',
+      url: 'https://d2jx2rerrg6sh3.cloudfront.net/image-handler/ts/20180516072018/ri/673/picture/2018/5/shutterstock_By_MaraZe.jpg',
       title: 'Paleo Diet Recipes',
       width: '40%',
     },

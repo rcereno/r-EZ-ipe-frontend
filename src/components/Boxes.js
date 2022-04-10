@@ -21,7 +21,7 @@ const images = [
       width: '40%',
     },
     {
-      url: 'https://th.bing.com/th/id/R.3a5711153a65a4e35dd50a09064fa1ec?rik=L2xi97DnyQWTcA&riu=http%3a%2f%2fwww.nutritionsecrets.com%2fwp-content%2fuploads%2f2016%2f08%2fvegetarian-diet.jpg&ehk=G5mWp%2fFiRCdKdNY6xpUN%2fAuPQxd%2f9dVzH01WxlgxIQI%3d&risl=&pid=ImgRaw&r=0',
+      url: 'https://www.heartfoundation.org.nz/media/images/nutrition/page-heros/plant-based-diet_737_553_c1.jpg',
       title: 'Vegan Recipes',
       path: "/veganrecipes",
       width: '30%',
