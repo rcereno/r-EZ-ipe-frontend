@@ -12,6 +12,8 @@ npm install --save-dev nodemon
 npm install express body-parser concurrently
 npm install --save mongoose
 npm i dotenv
+npm install @mui/material @emotion/react @emotion/styled
+npm install @mui/material @mui/styled-engine-sc styled-components
 
 run backend with:
 npm run server
