@@ -63,8 +63,14 @@ function Recipe() {
     const handleExpandClick = () => {
       setExpanded(!expanded);
     };
+   
 
     return (
+        <body style={{
+            background: "linear-gradient(#FFFFFF, #D2B48C)",
+            height: '100%'
+    
+        }}>
         <section>
             <div class="recipes">
                 <h1 class="mt-5">Recipes</h1>
@@ -134,6 +140,7 @@ function Recipe() {
                     </Card>
             </div>
         </section>
+        </body>
     );
 }
 
