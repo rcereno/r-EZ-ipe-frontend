@@ -70,7 +70,7 @@ const classes = useStyles();
 	return (
 		<body style={{
             background: "linear-gradient(#FFFFFF, #D2B48C)",
-            height: '1000px'
+            height: '100%'
 
         }}>
 		<section>

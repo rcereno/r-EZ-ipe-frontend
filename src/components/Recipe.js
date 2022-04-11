@@ -46,7 +46,7 @@ const useStyles = makeStyles((theme) => ({
       backgroundColor: red[500],
     },
   }));
-  
+
 function Recipe() {
     const classes = useStyles();
     const [expanded, setExpanded] = React.useState(false);
@@ -148,35 +148,3 @@ function Recipe() {
 }
 
 export default Recipe;
-
-// {
-				
-//     items.map(item => (
-//         <div class="accordion" id="accordionExample">
-//             <div class="card">
-//                 <div class="card-header" id="headingOne">
-//                     <h2 class="mb-0">
-//                         <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-//                             <i> Recipe for {item.name} </i>
-//                         </button>
-//                     </h2>
-//                 </div>
-
-//                 <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-//                     <div class="card-body">
-//                         <img src={item.imageURL} height="150" width="150" />
-//                         <div> <b>Steps:</b> <li>{item.steps}</li> </div>
-
-
-//                         <div> <b>Ingredients:</b> <li>{item.ingredients.name}</li> </div>
-                        
-
-
-
-//                     </div>
-//                 </div>
-//             </div>
-//         </div>
-
-//     ))
-// }
