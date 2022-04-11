@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
       borderRadius: 40,
       background: 'linear-gradient(#FFFFFF 30%, #D2B48C 150%)',
       marginTop:"5%",
-      boxShadow: "1px 1px 25px #9E9E9E"
+      boxShadow: "1px 1px 25px #9E9E9E",
         
     },
     media: {
@@ -73,7 +73,7 @@ export const Vegan = () =>
 
         }}>
 		<section>
-		<Typography variant="h1" color="textSecondary">
+		<Typography align = "center" variant="h1" color="textSecondary">
                                     Vegan Recipes
                                 </Typography>
 

@@ -74,7 +74,7 @@ export const Vegetarian = () =>
 
         }}>
 		<section>
-		<Typography variant="h1" color="textSecondary">
+		<Typography  align = "center" variant="h1" color="textSecondary">
                                     Vegetarian Recipes
                                 </Typography>
 

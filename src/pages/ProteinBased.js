@@ -74,7 +74,7 @@ const classes = useStyles();
 
         }}>
 		<section>
-		<Typography variant="h1" color="textSecondary">
+		<Typography  align = "center" variant="h1" color="textSecondary">
                                     Protein Recipes
                                 </Typography>
 				{
