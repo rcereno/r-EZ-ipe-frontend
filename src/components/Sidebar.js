@@ -6,6 +6,7 @@ import * as AiIcons from "react-icons/ai";
 import { SidebarData } from "./SidebarData";
 import SubMenu from "./SubMenu";
 import { IconContext } from "react-icons/lib";
+import Typography from '@material-ui/core/Typography';
 
 const Nav = styled.div`
 background: #D2B48C;
@@ -62,7 +63,9 @@ return (
 					color: "white" }}
 		>
 			{/*<img src={logo} alt="logo" width ="250" height = "250"/> */}
-			<center>Recipe Categories</center>
+			<Typography align = "center" variant="p1" color="textWhite">
+                                    Recipe Categories
+                                </Typography>
 		</h1>
 		</Nav>
 		<SidebarNav sidebar={sidebar}>
