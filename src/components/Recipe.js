@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
       width: "50%",
       marginLeft:"25%",
       borderRadius: 40,
-      background: 'linear-gradient(#FFFFFF 30%, #C9F5EA 150%)',
+      background: 'linear-gradient(#FFFFFF 80%, #B1FAF6 110%)',
       marginTop:"5%",
       boxShadow: "1px 1px 25px #9E9E9E"
         
