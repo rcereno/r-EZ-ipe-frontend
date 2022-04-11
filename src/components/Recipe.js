@@ -76,8 +76,12 @@ function Recipe() {
         }}>
         <section>
             <div class="recipes">
-                <h1 class="mt-5">Recipes</h1>
-                <h5 class="mt-5"> Browse our recipes or submit your own</h5>
+            <Typography variant="h1" color="textSecondary">
+                                    Recipes
+                                    <Typography variant="body1" color="textPrimary" component="p">
+                                    Browse our recipes or submit your own
+                                </Typography>
+                                </Typography>
                 <form method="POST" action="/addRecipe">
                     <div class="input-group justify-content-center">
                         <div class="input-group-prepend">
