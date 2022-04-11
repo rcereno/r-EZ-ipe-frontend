@@ -58,7 +58,7 @@ export const Vegetarian = () =>
     const [items, setItems] = useState([]);
 
     const fetchItems = async () => {
-        const data = await fetch('/veganrecipes');
+        const data = await fetch('/vegetarianrecipes');
         const items = await data.json();
         setItems(items);
     };
@@ -74,7 +74,9 @@ export const Vegetarian = () =>
 
         }}>
 		<section>
-				<center><h1>Vegetarian Recipes</h1></center>
+		<Typography variant="h1" color="textSecondary">
+                                    Vegetarian Recipes
+                                </Typography>
 
 				{
                     items.map(item => (

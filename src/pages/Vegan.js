@@ -73,7 +73,9 @@ export const Vegan = () =>
 
         }}>
 		<section>
-				<center><h1>Vegan Recipes</h1></center>
+		<Typography variant="h1" color="textSecondary">
+                                    Vegan Recipes
+                                </Typography>
 
 				{
                     items.map(item => (

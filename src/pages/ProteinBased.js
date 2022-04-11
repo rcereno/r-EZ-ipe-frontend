@@ -74,8 +74,9 @@ const classes = useStyles();
 
         }}>
 		<section>
-				<center><h1>Protein Recipes</h1></center>
-
+		<Typography variant="h1" color="textSecondary">
+                                    Protein Recipes
+                                </Typography>
 				{
                     items.map(item => (
                         <Card className={classes.root}>
