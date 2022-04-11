@@ -23,8 +23,9 @@ const useStyles = makeStyles((theme) => ({
     root: {
       width: "50%",
       marginLeft:"25%",
-      borderRadius: 12,
-      background: 'linear-gradient(#FFFFFF 30%, #D2B48C 90%)',
+      borderRadius: 40,
+      background: 'linear-gradient(#FFFFFF 30%, #D2B48C 150%)',
+    spacing: 10,
     },
     media: {
       height: 0,
@@ -91,9 +92,10 @@ function Recipe() {
                 </form>
                 <Sidebar />
 
-                <Card className={classes.root}>
-                    {
+               {
                     items.map(item => (
+                        <Card className={classes.root}>
+                    
                         <><CardHeader
                             avatar={<Avatar aria-label="recipe" className={classes.avatar}>
                                 EZ
@@ -134,10 +136,9 @@ function Recipe() {
                                     </Typography>
                                 </CardContent>
                             </Collapse></>
-
+                            </Card>
                     ))
-}
-                    </Card>
+                                }
             </div>
         </section>
         </body>
