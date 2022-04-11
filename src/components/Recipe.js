@@ -6,7 +6,6 @@ import clsx from 'clsx';
 import Card from '@material-ui/core/Card';
 import CardHeader from '@material-ui/core/CardHeader';
 import CardMedia from '@material-ui/core/CardMedia';
-import Box from '@material-ui/core/Box';
 import CardContent from '@material-ui/core/CardContent';
 import CardActions from '@material-ui/core/CardActions';
 import Collapse from '@material-ui/core/Collapse';
@@ -26,8 +25,8 @@ const useStyles = makeStyles((theme) => ({
       marginLeft:"25%",
       borderRadius: 40,
       background: 'linear-gradient(#FFFFFF 30%, #D2B48C 150%)',
-      marginBottom:"5%",
       marginTop:"5%",
+      boxShadow: "1px 1px 25px #9E9E9E"
         
     },
     media: {
@@ -72,7 +71,7 @@ function Recipe() {
     return (
         <body style={{
             background: "linear-gradient(#FFFFFF, #D2B48C)",
-            height: '100%'
+            height: '100%',
     
         }}>
         <section>
