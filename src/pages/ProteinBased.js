@@ -15,6 +15,7 @@ import FavoriteIcon from '@material-ui/icons/Favorite';
 import ShareIcon from '@material-ui/icons/Share';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
+import Sidebar from "../components/Sidebar";
 
 const useStyles = makeStyles((theme) => ({
     
@@ -77,6 +78,7 @@ const classes = useStyles();
 		<Typography  align = "center" variant="h1" color="textSecondary">
                                     Protein Recipes
                                 </Typography>
+                                <Sidebar />
 				{
                     items.map(item => (
                         <Card className={classes.root}>

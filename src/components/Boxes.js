@@ -1,10 +1,7 @@
 import React from 'react';
-import logo from '../logo.png';
 import { makeStyles } from '@material-ui/core/styles';
 import ButtonBase from '@material-ui/core/ButtonBase';
 import Typography from '@material-ui/core/Typography';
-import { Link } from "react-router-dom";
-import styled from "styled-components";
 
 const images = [
     {

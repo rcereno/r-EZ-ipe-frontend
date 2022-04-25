@@ -44,7 +44,13 @@
 }
 .proteinbased,
 .vegan,
-.vegetarian
+.vegetarian,
+.quickandeasy,
+.lowbudget,
+.lessthanfive,
+.keto,
+.paleo,
+.seafood
 {
   display: flex;
   margin-left: 260px;

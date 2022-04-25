@@ -15,6 +15,7 @@ import FavoriteIcon from '@material-ui/icons/Favorite';
 import ShareIcon from '@material-ui/icons/Share';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
+import Sidebar from "../components/Sidebar";
 
 const useStyles = makeStyles((theme) => ({
     
@@ -76,6 +77,7 @@ export const Vegan = () =>
 		<Typography align = "center" variant="h1" color="textSecondary">
                                     Vegan Recipes
                                 </Typography>
+                                <Sidebar />
 
 				{
                     items.map(item => (

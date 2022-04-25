@@ -27,5 +27,53 @@ export const SidebarData = [
 
 	iconClosed: <RiIcons.RiArrowDownSFill />,
 	iconOpened: <RiIcons.RiArrowUpSFill />,
+},
+{
+	title: "Quick & EZ",
+	path: "/quickeasyrecipes",
+	icon: <FaCarrot/>,
+
+	iconClosed: <RiIcons.RiArrowDownSFill />,
+	iconOpened: <RiIcons.RiArrowUpSFill />,
+},
+{
+	title: "Low Budget",
+	path: "/lowbudgetrecipes",
+	icon: <FaCarrot/>,
+
+	iconClosed: <RiIcons.RiArrowDownSFill />,
+	iconOpened: <RiIcons.RiArrowUpSFill />,
+},
+{
+	title: "< 5 Ingredients",
+	path: "/lessthanfiverecipes",
+	icon: <FaCarrot/>,
+
+	iconClosed: <RiIcons.RiArrowDownSFill />,
+	iconOpened: <RiIcons.RiArrowUpSFill />,
+},
+{
+	title: "Keto-Friendly",
+	path: "/ketorecipes",
+	icon: <FaCarrot/>,
+
+	iconClosed: <RiIcons.RiArrowDownSFill />,
+	iconOpened: <RiIcons.RiArrowUpSFill />,
+},
+{
+	title: "Paleo",
+	path: "/paleorecipes",
+	icon: <FaCarrot/>,
+
+	iconClosed: <RiIcons.RiArrowDownSFill />,
+	iconOpened: <RiIcons.RiArrowUpSFill />,
+},
+{
+	title: "Seafood",
+	path: "/seafoodrecipes",
+	icon: <FaCarrot/>,
+
+	iconClosed: <RiIcons.RiArrowDownSFill />,
+	iconOpened: <RiIcons.RiArrowUpSFill />,
 }
 ];
