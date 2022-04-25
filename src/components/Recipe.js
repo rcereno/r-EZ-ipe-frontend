@@ -16,6 +16,10 @@ import FavoriteIcon from '@material-ui/icons/Favorite';
 import ShareIcon from '@material-ui/icons/Share';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
+import { Navigate } from 'react-router-dom';
+import Menu from '@material-ui/core/Menu';
+import MenuItem from '@material-ui/core/MenuItem';
+
 
 const useStyles = makeStyles((theme) => ({
     
@@ -49,6 +53,7 @@ const useStyles = makeStyles((theme) => ({
 
 function Recipe() {
     const classes = useStyles();
+    const [anchorEl, setAnchorEl] = React.useState(null);
     const [expanded, setExpanded] = React.useState(false);
         useEffect(() => {
         fetchItems();
@@ -66,6 +71,13 @@ function Recipe() {
     const handleExpandClick = () => {
       setExpanded(!expanded);
     };
+    const handleClick = (event) => {
+        setAnchorEl(event.currentTarget);
+      };
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
    
 
     return (
@@ -78,7 +90,7 @@ function Recipe() {
             <div class="recipes">
             <Typography variant="h1" color="textSecondary">
                                     Recipes
-                                    <Typography variant="body1" color="textPrimary" component="p">
+                                    <Typography variant="body1" color="textPrimary" compone nt="p">
                                     Browse our recipes or submit your own
                                 </Typography>
                                 </Typography>
@@ -106,7 +118,7 @@ function Recipe() {
                             avatar={<Avatar aria-label="recipe" className={classes.avatar}>
                                 EZ
                             </Avatar>}
-                            action={<IconButton aria-label="settings">
+                            action={<IconButton >
                                 <MoreVertIcon />
                             </IconButton>}
                             title= {item.name}
@@ -121,7 +133,15 @@ function Recipe() {
                                 <IconButton aria-label="add to favorites">
                                     <FavoriteIcon />
                                 </IconButton>
-                                <IconButton aria-label="share">
+                                <IconButton aria-label="share" href={item.originalURL} target="_blank" rel="noopener noreferrer"  onClick = {handleClick}>
+                                {/* <Menu
+        id="simple-menu"
+        anchorEl={anchorEl}
+        open={Boolean(anchorEl)}
+        onClick={handleClose}
+      >
+        <MenuItem onClick={handleClose}>Source</MenuItem>
+        </Menu> */}
                                     <ShareIcon />
                                 </IconButton>
                                 <IconButton
