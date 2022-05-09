@@ -49,6 +49,12 @@ const useStyles = makeStyles((theme) => ({
 
 export const Vegan = () =>
  {
+    const [anchorEl, setAnchorEl] = React.useState(null);
+
+    const handleClick = (event) => {
+        setAnchorEl(event.currentTarget);
+      };
+  
 	const classes = useStyles();
     const [expanded, setExpanded] = React.useState(false);
         useEffect(() => {
@@ -102,7 +108,7 @@ export const Vegan = () =>
                                 <IconButton aria-label="add to favorites">
                                     <FavoriteIcon />
                                 </IconButton>
-                                <IconButton aria-label="share">
+                                <IconButton aria-label="share"  href={item.originalURL} target="_blank" rel="noopener noreferrer"  onClick = {handleClick}>
                                     <ShareIcon />
                                 </IconButton>
                                 <IconButton

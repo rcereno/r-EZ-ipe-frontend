@@ -62,7 +62,11 @@ export const Keto = () =>
         const items = await data.json();
         setItems(items);
     };
+    const [anchorEl, setAnchorEl] = React.useState(null);
 
+    const handleClick = (event) => {
+        setAnchorEl(event.currentTarget);
+      };
   
     const handleExpandClick = () => {
       setExpanded(!expanded);
@@ -102,7 +106,7 @@ export const Keto = () =>
                                 <IconButton aria-label="add to favorites">
                                     <FavoriteIcon />
                                 </IconButton>
-                                <IconButton aria-label="share">
+                                <IconButton aria-label="share" href={item.originalURL} target="_blank" rel="noopener noreferrer"  onClick = {handleClick}>
                                     <ShareIcon />
                                 </IconButton>
                                 <IconButton

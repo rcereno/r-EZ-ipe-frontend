@@ -9,16 +9,19 @@ const images = [
       title: 'Quick & EZ Recipes',
       url: 'https://www.chelseasmessyapron.com/wp-content/uploads/2020/07/quick-and-easy.svg',
       width: '30%',
+      path: "/quickeasyrecipes",
     },
     {
       title: 'Low-Budget Recipes',
       url: 'https://i.dailymail.co.uk/1s/2021/10/22/17/47912065-0-Online_tool_SwitchIt_helps_users_switch_from_firms_funding_fossi-a-4_1634919841797.jpg',
       width: '40%',
+      path: "/lowbudgetrecipes",
     },
     {
       title: 'Less Than 5 Ingredients Recipes',
       url: "https://upload.wikimedia.org/wikipedia/commons/2/26/Eo_circle_green_number-5.svg",
       width: '30%',
+      path: "/lessthanfiverecipes",
     },
   ];
 
@@ -97,6 +100,12 @@ const images = [
 
   export default function ButtonBases() {
     const classes = useStyles();
+
+    const [anchorEl, setAnchorEl] = React.useState(null);
+    const handleClick = (event) => {
+      setAnchorEl(event.currentTarget);
+    };
+
   
     return (
 
@@ -107,6 +116,7 @@ const images = [
             key={image.title}
             className={classes.image}
             focusVisibleClassName={classes.focusVisible}
+            href={image.path} onClick = {handleClick}
             style={{
               width: image.width,
             }}

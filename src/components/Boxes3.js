@@ -8,16 +8,19 @@ const images = [
       url: 'https://www.endocrineweb.com/sites/default/files/imagecache/gallery-large/wysiwyg_imageupload/37373/2019/02/25/KetoDiet_69332880_M.jpg',
       title: 'Keto-Friendly Recipes',
       width: '30%',
+      path: "/ketorecipes",
     },
     {
       url: 'https://d2jx2rerrg6sh3.cloudfront.net/image-handler/ts/20180516072018/ri/673/picture/2018/5/shutterstock_By_MaraZe.jpg',
       title: 'Paleo Diet Recipes',
       width: '40%',
+      path: "/paleorecipes",
     },
     {
       url: 'https://live.staticflickr.com/65535/48470276321_d1759e6625_b.jpg',
       title: 'Seafood Recipes',
       width: '30%',
+      path: "/seafoodrecipes",
     },
   ];
 
@@ -96,6 +99,11 @@ const images = [
 
   export default function ButtonBases() {
     const classes = useStyles();
+
+    const [anchorEl, setAnchorEl] = React.useState(null);
+    const handleClick = (event) => {
+      setAnchorEl(event.currentTarget);
+    };
   
     return (
 
@@ -105,6 +113,7 @@ const images = [
             focusRipple
             key={image.title}
             className={classes.image}
+            href={image.path} onClick = {handleClick}
             focusVisibleClassName={classes.focusVisible}
             style={{
               width: image.width,
