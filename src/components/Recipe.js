@@ -50,7 +50,7 @@ const useStyles = makeStyles((theme) => ({
 
 function Recipe() {
     const classes = useStyles();
-    const [anchorEl, setAnchorEl] = React.useState(null);
+    const [setAnchorEl] = React.useState(null);
     const [expanded, setExpanded] = React.useState(false);
         useEffect(() => {
         fetchItems();
@@ -71,9 +71,6 @@ function Recipe() {
     const handleClick = (event) => {
         setAnchorEl(event.currentTarget);
       };
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
 
    
 
