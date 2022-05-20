@@ -16,9 +16,6 @@ import FavoriteIcon from '@material-ui/icons/Favorite';
 import ShareIcon from '@material-ui/icons/Share';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
-import { Navigate } from 'react-router-dom';
-import Menu from '@material-ui/core/Menu';
-import MenuItem from '@material-ui/core/MenuItem';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -62,7 +59,7 @@ function Recipe() {
     const [items, setItems] = useState([]);
 
     const fetchItems = async () => {
-        const data = await fetch('/recipes');
+        const data = await fetch('https://r-ez-ipe-api.herokuapp.com/recipes');
         const items = await data.json();
         setItems(items);
     };

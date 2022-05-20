@@ -65,7 +65,7 @@ export const Paleo = () =>
     const [items, setItems] = useState([]);
 
     const fetchItems = async () => {
-        const data = await fetch('/paleorecipes');
+        const data = await fetch('https://r-ez-ipe-api.herokuapp.com/paleorecipes');
         const items = await data.json();
         setItems(items);
     };

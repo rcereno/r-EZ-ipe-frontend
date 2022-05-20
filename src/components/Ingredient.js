@@ -8,7 +8,7 @@ function Ingredient() {
     const [items, setItems] = useState([]);
 
     const fetchItems = async () => {
-        const data = await fetch('/ingredients');
+        const data = await fetch('https://r-ez-ipe-api.herokuapp.com/ingredients');
         const items = await data.json();
         setItems(items);
     };
