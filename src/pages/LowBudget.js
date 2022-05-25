@@ -110,7 +110,7 @@ export const LowBudget = () =>
                                     <FavoriteIcon />
                                 </IconButton>
                                 <IconButton aria-label="share"  href={item.originalURL} target="_blank" rel="noopener noreferrer"  onClick = {handleClick}>
-                                    <ShareIcon />
+                                    <exi />
                                 </IconButton>
                                 <IconButton
                                     className={clsx(classes.expand, {
