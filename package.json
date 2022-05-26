@@ -50,6 +50,7 @@
     },
     "description": "https://github.com/mui-org/material-ui/blob/v4.x/docs/src/pages/components/buttons/ButtonBase.js",
     "devDependencies": {
+        "cypress": "^9.7.0",
         "react-scripts": "latest"
     },
     "title": "Material demo"
