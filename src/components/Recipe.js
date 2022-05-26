@@ -16,10 +16,6 @@ import FavoriteIcon from '@material-ui/icons/Favorite';
 import ShareIcon from '@material-ui/icons/Share';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
-import { Navigate } from 'react-router-dom';
-import Menu from '@material-ui/core/Menu';
-import MenuItem from '@material-ui/core/MenuItem';
-
 
 const useStyles = makeStyles((theme) => ({
     
@@ -53,7 +49,7 @@ const useStyles = makeStyles((theme) => ({
 
 function Recipe() {
     const classes = useStyles();
-    const [anchorEl, setAnchorEl] = React.useState(null);
+    const [setAnchorEl] = React.useState(null);
     const [expanded, setExpanded] = React.useState(false);
         useEffect(() => {
         fetchItems();
@@ -74,9 +70,6 @@ function Recipe() {
     const handleClick = (event) => {
         setAnchorEl(event.currentTarget);
       };
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
 
    
 

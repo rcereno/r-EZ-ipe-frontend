@@ -62,7 +62,7 @@ export const Keto = () =>
         const items = await data.json();
         setItems(items);
     };
-    const [anchorEl, setAnchorEl] = React.useState(null);
+    const [ setAnchorEl] = React.useState(null);
 
     const handleClick = (event) => {
         setAnchorEl(event.currentTarget);

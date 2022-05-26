@@ -50,7 +50,7 @@ const useStyles = makeStyles((theme) => ({
 
 export const Vegetarian = () =>
  {
-    const [anchorEl, setAnchorEl] = React.useState(null);
+    const [ setAnchorEl] = React.useState(null);
 
     const handleClick = (event) => {
         setAnchorEl(event.currentTarget);
