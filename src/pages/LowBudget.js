@@ -45,6 +45,7 @@ const useStyles = makeStyles((theme) => ({
       backgroundColor: red[500],
       
     },
+    
   }));
 
 export const LowBudget = () =>
