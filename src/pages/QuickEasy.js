@@ -65,7 +65,7 @@ export const QuickEasy = () =>
     const [items, setItems] = useState([]);
 
     const fetchItems = async () => {
-        const data = await fetch('https://r-ez-ipe-api.herokuapp.com/quickeasyrecipes');
+        const data = await fetch('/quickeasyrecipes');
         const items = await data.json();
         setItems(items);
     };

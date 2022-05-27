@@ -58,7 +58,7 @@ function Recipe() {
     const [items, setItems] = useState([]);
 
     const fetchItems = async () => {
-        const data = await fetch('https://r-ez-ipe-api.herokuapp.com/recipes');
+        const data = await fetch('/recipes');
         const items = await data.json();
         setItems(items);
     };

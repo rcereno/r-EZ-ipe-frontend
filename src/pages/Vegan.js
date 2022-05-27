@@ -64,7 +64,7 @@ export const Vegan = () =>
     const [items, setItems] = useState([]);
 
     const fetchItems = async () => {
-        const data = await fetch('https://r-ez-ipe-api.herokuapp.com/veganrecipes');
+        const data = await fetch('/veganrecipes');
         const items = await data.json();
         setItems(items);
     };

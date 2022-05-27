@@ -64,7 +64,7 @@ export const Seafood = () =>
     const [items, setItems] = useState([]);
 
     const fetchItems = async () => {
-        const data = await fetch('https://r-ez-ipe-api.herokuapp.com/seafoodrecipes');
+        const data = await fetch('/seafoodrecipes');
         const items = await data.json();
         setItems(items);
     };

@@ -58,7 +58,7 @@ export const Keto = () =>
     const [items, setItems] = useState([]);
 
     const fetchItems = async () => {
-        const data = await fetch('https://r-ez-ipe-api.herokuapp.com/ketorecipes');
+        const data = await fetch('/ketorecipes');
         const items = await data.json();
         setItems(items);
     };

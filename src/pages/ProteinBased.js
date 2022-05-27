@@ -65,7 +65,7 @@ const classes = useStyles();
     const [items, setItems] = useState([]);
 
     const fetchItems = async () => {
-        const data = await fetch('https://r-ez-ipe-api.herokuapp.com/proteinrecipes');
+        const data = await fetch('/proteinrecipes');
         const items = await data.json();
         setItems(items);
     };

@@ -65,7 +65,7 @@ export const LessThanFive = () =>
     const [items, setItems] = useState([]);
 
     const fetchItems = async () => {
-        const data = await fetch('https://r-ez-ipe-api.herokuapp.com/lessthanfiverecipes');
+        const data = await fetch('/lessthanfiverecipes');
         const items = await data.json();
         setItems(items);
     };

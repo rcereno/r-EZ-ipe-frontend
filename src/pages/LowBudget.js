@@ -64,7 +64,7 @@ export const LowBudget = () =>
     const [items, setItems] = useState([]);
 
     const fetchItems = async () => {
-        const data = await fetch('https://r-ez-ipe-api.herokuapp.com/lowbudgetrecipes');
+        const data = await fetch('/lowbudgetrecipes');
         const items = await data.json();
         setItems(items);
     };
