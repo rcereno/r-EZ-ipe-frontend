@@ -4,6 +4,7 @@ import Nav from './components/Nav';
 import Home from './components/Home';
 import Recipe from './components/Recipe';
 import Ingredient from './components/Ingredient';
+import Register from './components/easyRegister';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
 import { ProteinBased } from "./pages/ProteinBased";
@@ -35,6 +36,8 @@ function App() {
             <Route path="/lowbudgetrecipes" exact component={LowBudget} />
             <Route path="/lessthanfiverecipes" exact component={LessThanFive} />
             <Route path="/seafoodrecipes" exact component={Seafood} />
+            <Route path="/login" exact component={Register} />
+
         </Switch>
       </div>
     </Router>
