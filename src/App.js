@@ -16,11 +16,15 @@ import { LowBudget } from "./pages/LowBudget";
 import { LessThanFive } from "./pages/LessThanFive";
 import { Paleo } from "./pages/Paleo";
 import { Seafood } from "./pages/Seafood";
-
+import LoginButton from "./components/login-button";
+import LogoutButton from "./components/logout-button";
+import Profile from "./pages/profile";
+import { useAuth0 } from "@auth0/auth0-react";
 
 function App() {
   return (
     <Router>
+      
       <div className="App">
           <Nav />
           <Switch>

@@ -1,4 +1,6 @@
 import React, {useEffect, useState} from 'react';
+import LoginButton from './login-button';
+import LogoutButton from './logout-button';
 
 function EasyRegister() {
     useEffect( () => {
@@ -23,8 +25,10 @@ function EasyRegister() {
         <section>
             
             <div class="Register">
-                <h1 class="mt-5">Register</h1>
-                <form method="POST" action="/addUser">
+                <h1 class="mt-5">Auth0 Login</h1>
+                <LoginButton/>
+                <LogoutButton/>
+                {/* <form method="POST" action="/addUser">
 
                     <div class="input-group justify-content-center">
                         <div class="input-group-prepend">
@@ -34,7 +38,7 @@ function EasyRegister() {
                             <input type="submit" value="Send" class="btn btn-primary mb-2" />
                         </div>
                     </div>
-                </form>
+                </form> */}
 
                 {
                 items.map(item => (
