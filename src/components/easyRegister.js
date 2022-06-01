@@ -26,8 +26,9 @@ function EasyRegister() {
             
             <div class="Register">
                 <h1 class="mt-5">Auth0 Login</h1>
-                <LoginButton/>
                 <LogoutButton/>
+
+                <LoginButton/>
                 {/* <form method="POST" action="/addUser">
 
                     <div class="input-group justify-content-center">
