@@ -1,73 +1,59 @@
 {
-  "name": "frontend",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@emotion/react": "^11.9.0",
-    "@emotion/styled": "^11.8.1",
-    "@material-ui/core": "latest",
-    "@material-ui/icons": "^4.11.3",
-    "@material/menu": "^13.0.0",
-    "@mui/material": "^5.6.0",
-    "@mui/styled-engine-sc": "^5.5.2",
-    "@testing-library/jest-dom": "^5.11.6",
-    "@testing-library/react": "^11.2.2",
-    "@testing-library/user-event": "^12.6.0",
-    "express": "^4.18.1",
-    "normalizr": "^3.6.1",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "react-icons": "^4.3.1",
-    "react-router-dom": "^5.3.1",
-    "react-scripts": "4.0.1",
-    "serve": "^13.0.2",
-    "styled-components": "^5.3.5",
-    "web-vitals": "^0.2.4"
-  },
-  "scripts": {
-
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "proxy": "http://r-ez-ipe-api.herokuapp.com",
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "engines": {
-    "node": "16.13.1"
-  },
-  "description": "https://github.com/mui-org/material-ui/blob/v4.x/docs/src/pages/components/buttons/ButtonBase.js",
-  "devDependencies": {
-    "cypress": "^9.7.0",
-    "react-scripts": "latest"
-  },
-  "title": "Material demo",
-  "main": "index.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/rcereno/r-EZ-ipe-frontend.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/rcereno/r-EZ-ipe-frontend/issues"
-  },
-  "homepage": "https://github.com/rcereno/r-EZ-ipe-frontend#readme"
+    "name": "frontend",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+        "@emotion/react": "^11.9.0",
+        "@emotion/styled": "^11.8.1",
+        "@material-ui/core": "latest",
+        "@material-ui/icons": "^4.11.3",
+        "@material/menu": "^13.0.0",
+        "@mui/material": "^5.6.0",
+        "@mui/styled-engine-sc": "^5.5.2",
+        "@testing-library/jest-dom": "^5.11.6",
+        "@testing-library/react": "^11.2.2",
+        "@testing-library/user-event": "^12.6.0",
+        "normalizr": "^3.6.1",
+        "react": "^17.0.1",
+        "react-dom": "^17.0.1",
+        "react-icons": "^4.3.1",
+        "react-router-dom": "^5.3.1",
+        "react-scripts": "4.0.1",
+        "styled-components": "^5.3.5",
+        "web-vitals": "^0.2.4"
+    },
+    "scripts": {
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "test": "react-scripts test",
+        "eject": "react-scripts eject"
+    },
+    "proxy": "http://r-ez-ipe.herokuapp.com",
+    "eslintConfig": {
+        "extends": [
+            "react-app",
+            "react-app/jest"
+        ]
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "engines": {
+        "node": "16.13.1"
+      },
+    "description": "https://github.com/mui-org/material-ui/blob/v4.x/docs/src/pages/components/buttons/ButtonBase.js",
+    "devDependencies": {
+        "cypress": "^9.7.0",
+        "react-scripts": "latest"
+    },
+    "title": "Material demo"
 }
