@@ -19,16 +19,19 @@
         "react-icons": "^4.3.1",
         "react-router-dom": "^5.3.1",
         "react-scripts": "4.0.1",
+        "serve": "^13.0.2",
         "styled-components": "^5.3.5",
         "web-vitals": "^0.2.4"
     },
     "scripts": {
-        "start": "react-scripts start",
+        "dev": "react-scripts start",
+        "start": "serve -s build",
         "build": "react-scripts build",
-        "test": "react-scripts test",
-        "eject": "react-scripts eject"
-    },
-    "proxy": "http://r-ez-ipe.herokuapp.com",
+        "test": "react-scripts test --env=jsdom",
+        "eject": "react-scripts eject",
+        "heroku-postbuild": "npm run build"
+        },
+    "proxy": "http://r-ez-ipe-api.herokuapp.com",
     "eslintConfig": {
         "extends": [
             "react-app",
@@ -49,7 +52,7 @@
     },
     "engines": {
         "node": "16.13.1"
-      },
+    },
     "description": "https://github.com/mui-org/material-ui/blob/v4.x/docs/src/pages/components/buttons/ButtonBase.js",
     "devDependencies": {
         "cypress": "^9.7.0",
