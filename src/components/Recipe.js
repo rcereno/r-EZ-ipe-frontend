@@ -83,7 +83,7 @@ function Recipe() {
             <div class="recipes">
             <Typography variant="h1" color="textSecondary">
                                     Recipes
-                                    <Typography variant="body1" color="textPrimary" compone nt="p">
+                                    <Typography variant="body1" color="textPrimary" component="p">
                                     Browse our recipes or submit your own
                                 </Typography>
                                 </Typography>
@@ -91,10 +91,11 @@ function Recipe() {
                     <div class="input-group justify-content-center">
                         <div class="input-group-prepend">
 
-                            <input type="text" name="recipeName" placeholder="Recipe Name" class="form-control" />
-                            <input type="text" name="recipeIngredients" placeholder="Ingredients" class="form-control" />
-                            <input type="text" name="recipeSteps" placeholder="Steps" class="form-control" />
-                            <input type="text" name="recipeURL" placeholder="Link" class="form-control" />
+                            <input type="text" name="recipeName" placeholder="Recipe Name (required)" class="form-control" required = "true"/>
+                            <input type="text" name="recipeIngredients" placeholder="Ingredients (required)" class="form-control" required = "true" />
+                            <input type="array" name="recipeSteps" placeholder="Steps (required)" class="form-control" required = "true" />
+                            <input type="link" name="recipeURL" placeholder="Link png/jpeg (optional)" class="form-control" />
+                            <input type="link" name="originalURL" placeholder="Recipe Link (optional)" class="form-control" />
                             <input type="submit" value="Send" class="btn btn-primary mb-2" />
 
                         </div>
@@ -127,14 +128,6 @@ function Recipe() {
                                     <FavoriteIcon />
                                 </IconButton>
                                 <IconButton aria-label="share" href={item.originalURL} target="_blank" rel="noopener noreferrer"  onClick = {handleClick}>
-                                {/* <Menu
-        id="simple-menu"
-        anchorEl={anchorEl}
-        open={Boolean(anchorEl)}
-        onClick={handleClose}
-      >
-        <MenuItem onClick={handleClose}>Source</MenuItem>
-        </Menu> */}
                                     <ShareIcon />
                                 </IconButton>
                                 <IconButton
@@ -149,10 +142,10 @@ function Recipe() {
                                 </IconButton>
                             </CardActions><Collapse in={expanded} timeout="auto" unmountOnExit>
                                 <CardContent>
-                                    <Typography paragraph>Method:</Typography>
-                                    <Typography paragraph>
-                                       {item.steps}
-                                    </Typography>
+                                <Typography variant="h5" color="textSecondary" ><b><i>STEPS</i></b></Typography>
+                                        <Typography li>
+                                        {Array.isArray(item.steps) ? (item.steps).map(i => (<li>{i}</li>)) : <li>{item.steps}</li>}
+                                        </Typography>
                                 </CardContent>
                             </Collapse></>
                             </Card>

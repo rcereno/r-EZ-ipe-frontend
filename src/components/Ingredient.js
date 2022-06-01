@@ -83,10 +83,10 @@ function Ingredient() {
             <div class="ingredients">
             <Typography variant="h1" color="textSecondary">
                                     Find by ingredient
-                                    <Typography variant="body1" color="textPrimary" compone nt="p">
+                                    <Typography variant="body1" color="textPrimary" component="p">
                                     Start typing to find matching ingrdients in our database
                                 </Typography>
-                                </Typography>
+            </Typography>
                 <form method="SEARCH" >
                     <div class="input-group justify-content-center">
                         <div class="input-group-prepend">
@@ -139,9 +139,9 @@ function Ingredient() {
                                     </IconButton>
                                 </CardActions><Collapse in={expanded} timeout="auto" unmountOnExit>
                                     <CardContent>
-                                        <Typography paragraph>Method:</Typography>
-                                        <Typography paragraph>
-                                           {item.steps}
+                                    <Typography variant="h5" color="textSecondary" ><b><i>STEPS</i></b></Typography>
+                                        <Typography li>
+                                        {Array.isArray(item.steps) ? (item.steps).map(i => (<li>{i}</li>)) : <li>{item.steps}</li>}
                                         </Typography>
                                     </CardContent>
                                 </Collapse></>
