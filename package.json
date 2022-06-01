@@ -13,6 +13,7 @@
     "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^11.2.2",
     "@testing-library/user-event": "^12.6.0",
+    "express": "^4.18.1",
     "normalizr": "^3.6.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
@@ -24,12 +25,11 @@
     "web-vitals": "^0.2.4"
   },
   "scripts": {
-    "dev": "react-scripts start",
-    "start": "serve -s build",
+
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "heroku-postbuild": "npm run build"
+    "eject": "react-scripts eject"
   },
   "proxy": "http://r-ez-ipe-api.herokuapp.com",
   "eslintConfig": {
