@@ -90,3 +90,16 @@
 .ingredients{
   text-align: center;
 }
+#errors {
+  display: none;
+}
+#errors.has-error {
+  display: block;
+}
+#errors #message {
+  color: #e45b3f;
+}
+.input{
+  width: auto;
+  margin: auto;
+}

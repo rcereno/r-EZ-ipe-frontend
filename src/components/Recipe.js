@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Sidebar from "./Sidebar";
+import '../App.css';
 import { makeStyles } from '@material-ui/core/styles';
 import clsx from 'clsx';
 import Card from '@material-ui/core/Card';
@@ -16,7 +17,10 @@ import FavoriteIcon from '@material-ui/icons/Favorite';
 import ShareIcon from '@material-ui/icons/Share';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
-
+import Alert from '@mui/material/Alert';
+import Box from '@mui/material/Box';
+import CloseIcon from "@mui/icons-material/Close";
+import validator from 'validator';
 const useStyles = makeStyles((theme) => ({
     
     root: {
@@ -46,8 +50,11 @@ const useStyles = makeStyles((theme) => ({
       backgroundColor: red[500],
     },
   }));
+  
 
 function Recipe() {
+
+
     const classes = useStyles();
     const [setAnchorEl] = React.useState(null);
     const [expanded, setExpanded] = React.useState(false);
@@ -71,6 +78,27 @@ function Recipe() {
         setAnchorEl(event.currentTarget);
       };
 
+      const [errorMessage, setErrorMessage] = useState('')
+    
+  const validateImageLink = (value) => {
+    if ((validator.isURL(value)) && (value.contains('png') || value.contains('jpeg') || value.contains('jpg'))) {
+        return true;
+    }else{
+      setErrorMessage('image link must have HTTPS:// and end with png/jpeg/jpg to display image')
+      return false;
+    }
+  }
+  const validate = (value) => {
+    if (!validator.isURL(value)) {
+        setErrorMessage('Must have HTTPS://')
+        return false;
+    }else{
+     return true;
+    }
+  }
+
+  const [open, setOpen] = React.useState(false);
+
    
 
     return (
@@ -87,20 +115,42 @@ function Recipe() {
                                     Browse our recipes or submit your own
                                 </Typography>
                                 </Typography>
+                                <Box sx={{ width: "100%" }}>
+      <Collapse in={open}>
+        <Alert severity='warning'
+          
+          action={
+            <IconButton
+              aria-label="close"
+              color="inherit"
+              size="small"
+              onClick={() => {
+                setOpen(false);
+              }}
+            >
+              <CloseIcon fontSize="inherit" />
+            </IconButton>
+          }
+        >
+          {errorMessage}
+        </Alert>
+      </Collapse>
+    </Box>
                 <form method="POST" action="/addRecipe">
+                
                     <div class="input-group justify-content-center">
-                        <div class="input-group-prepend">
-
-                            <input type="text" name="recipeName" placeholder="Recipe Name (required)" class="form-control" required = "true"/>
-                            <input type="text" name="recipeIngredients" placeholder="Ingredients (required)" class="form-control" required = "true" />
-                            <input type="array" name="recipeSteps" placeholder="Steps (required)" class="form-control" required = "true" />
-                            <input type="link" name="recipeURL" placeholder="Link png/jpeg (optional)" class="form-control" />
-                            <input type="link" name="originalURL" placeholder="Recipe Link (optional)" class="form-control" />
-                            <input type="submit" value="Send" class="btn btn-primary mb-2" />
-
-                        </div>
+                    <div class="input-group-prepend">
                     </div>
-    
+                        <div class="input-group-prepend" >
+                            <input type="text" name="recipeName" placeholder="Recipe Name (required)" class="form-control" required />
+                            <input type="text" name="recipeIngredients" placeholder="Ingredients (required)" class="form-control" required />
+                            <input type="text" name="recipeSteps" placeholder="Steps (required)" class="form-control" required/>
+                            
+                            <input class="form-control" type="url" name="recipeURL" placeholder="Link png/jpeg (optional)" onInputCapture={(e) => validateImageLink(e.target.value)?null:setOpen(true)} />
+                            <input class="form-control"  type="url" name="originalURL" placeholder="Recipe Link (optional)" onInputCapture={(e) => validate(e.target.value)?null:setOpen(true)}/>
+                        </div>
+                            <input type="submit" value="Send" class="btn btn-primary mb-2" />
+                    </div>
                 </form>
                 <Sidebar />
 
