@@ -1,4 +1,6 @@
 import React, {useEffect, useState} from 'react';
+import { SliderData } from './SliderData';
+import ImageSlider from './ImageSlider';
 
 function Ingredient() {
     useEffect( () => {
@@ -14,23 +16,35 @@ function Ingredient() {
     };
 
     return(
-
         <body style={{
-            background: "linear-gradient(#FFFFFF, #D2B48C)", 
-            height: '1000px'
-          }}>
+            background: "linear-gradient(#FFFFFF, #D2B48C)",
+            height: '100%'
+
+
+        }}>
+            
+
         <section>
             
-            <div class="container-fluid">
+            <div class="ingredients">
                 <h1 class="mt-5">Ingredients</h1>
-                <form method="GET" action="/ingredients">
+                <form method="POST" action="/addIngredient">
+                
                     <div class="input-group justify-content-center">
                         <div class="input-group-prepend">
                             <input type="text" name="ingredientName" placeholder = "input ingredients" class="form-control" />
                             <input type="submit" value="Send" class="btn btn-primary mb-2" />
+                            
                         </div>
+
+                        
+                        
                     </div>
+                    <div>
+                        <ImageSlider slides={SliderData} ></ImageSlider>
+                     </div>
                 </form>
+                    
 
                 {
                 items.map(item => (
@@ -42,7 +56,10 @@ function Ingredient() {
                 ))
                 }
             </div>
+            
+            
         </section>
+        
         </body>
     );
 }
