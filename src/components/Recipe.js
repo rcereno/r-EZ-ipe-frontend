@@ -81,7 +81,7 @@ function Recipe() {
       const [errorMessage, setErrorMessage] = useState('')
     
   const validateImageLink = (value) => {
-    if ((validator.isURL(value)) && (value.contains('png') || value.contains('jpeg') || value.contains('jpg'))) {
+    if ((validator.isURL(value))) {
         return true;
     }else{
       setErrorMessage('image link must have HTTPS:// and end with png/jpeg/jpg to display image')
@@ -148,8 +148,9 @@ function Recipe() {
                             
                             <input class="form-control" type="url" name="recipeURL" placeholder="Link png/jpeg (optional)" onInputCapture={(e) => validateImageLink(e.target.value)?null:setOpen(true)} />
                             <input class="form-control"  type="url" name="originalURL" placeholder="Recipe Link (optional)" onInputCapture={(e) => validate(e.target.value)?null:setOpen(true)}/>
-                        </div>
                             <input type="submit" value="Send" class="btn btn-primary mb-2" />
+                        </div>
+                           
                     </div>
                 </form>
                 <Sidebar />
