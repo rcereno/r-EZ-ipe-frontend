@@ -41,6 +41,7 @@ function App() {
             <Route path="/lessthanfiverecipes" exact component={LessThanFive} />
             <Route path="/seafoodrecipes" exact component={Seafood} />
             <Route path="/login" exact component={Register} />
+            <Route path="/profile" component={Profile}/>
 
         </Switch>
       </div>

@@ -45,7 +45,7 @@ function EasyRegister() {
                 items.map(item => (
                     <div class="row padding">
                         <div class="alert alert-info rounded-pill" role="alert">
-                            <i> Welcome: {item.name} </i>
+                            <i> Welcome: {item.email} </i>
                         </div>
                     </div>       
                 ))
