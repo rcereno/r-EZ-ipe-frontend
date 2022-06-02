@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-
 import { makeStyles } from '@material-ui/core/styles';
 import clsx from 'clsx';
 import Card from '@material-ui/core/Card';
@@ -16,7 +15,6 @@ import FavoriteIcon from '@material-ui/icons/Favorite';
 import ShareIcon from '@material-ui/icons/Share';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
-import Sidebar from "../components/Sidebar";
 
 const useStyles = makeStyles((theme) => ({
     
@@ -26,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
       borderRadius: 40,
       background: 'linear-gradient(#FFFFFF 30%, #D2B48C 150%)',
       marginTop:"5%",
-      boxShadow: "1px 1px 25px #9E9E9E"
+      boxShadow: "1px 1px 25px #9E9E9E",
         
     },
     media: {
@@ -48,15 +46,8 @@ const useStyles = makeStyles((theme) => ({
     },
   }));
 
-export const Vegetarian = () =>
+export const Vegan = () =>
  {
-    const [setAnchorEl] = React.useState(null);
-
-    const handleClick = (event) => {
-        setAnchorEl(event.currentTarget);
-      };
-  
-
 	const classes = useStyles();
     const [expanded, setExpanded] = React.useState(false);
         useEffect(() => {
@@ -66,7 +57,7 @@ export const Vegetarian = () =>
     const [items, setItems] = useState([]);
 
     const fetchItems = async () => {
-        const data = await fetch('https://r-ez-ipe-api.herokuapp.com/vegetarianrecipes');
+        const data = await fetch('/veganrecipes');
         const items = await data.json();
         setItems(items);
     };
@@ -82,10 +73,9 @@ export const Vegetarian = () =>
 
         }}>
 		<section>
-		<Typography  align = "center" variant="h1" color="textSecondary">
-                                    Vegetarian Recipes
+		<Typography align = "center" variant="h1" color="textSecondary">
+                                    Vegan Recipes
                                 </Typography>
-                                <Sidebar />
 
 				{
                     items.map(item => (
@@ -110,7 +100,7 @@ export const Vegetarian = () =>
                                 <IconButton aria-label="add to favorites">
                                     <FavoriteIcon />
                                 </IconButton>
-                                <IconButton aria-label="share"  href={item.originalURL} target="_blank" rel="noopener noreferrer"  onClick = {handleClick}>
+                                <IconButton aria-label="share">
                                     <ShareIcon />
                                 </IconButton>
                                 <IconButton

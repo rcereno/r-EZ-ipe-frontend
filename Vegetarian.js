@@ -16,7 +16,6 @@ import FavoriteIcon from '@material-ui/icons/Favorite';
 import ShareIcon from '@material-ui/icons/Share';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
-import Sidebar from "../components/Sidebar";
 
 const useStyles = makeStyles((theme) => ({
     
@@ -50,13 +49,6 @@ const useStyles = makeStyles((theme) => ({
 
 export const Vegetarian = () =>
  {
-    const [setAnchorEl] = React.useState(null);
-
-    const handleClick = (event) => {
-        setAnchorEl(event.currentTarget);
-      };
-  
-
 	const classes = useStyles();
     const [expanded, setExpanded] = React.useState(false);
         useEffect(() => {
@@ -66,7 +58,7 @@ export const Vegetarian = () =>
     const [items, setItems] = useState([]);
 
     const fetchItems = async () => {
-        const data = await fetch('https://r-ez-ipe-api.herokuapp.com/vegetarianrecipes');
+        const data = await fetch('/vegetarianrecipes');
         const items = await data.json();
         setItems(items);
     };
@@ -85,7 +77,6 @@ export const Vegetarian = () =>
 		<Typography  align = "center" variant="h1" color="textSecondary">
                                     Vegetarian Recipes
                                 </Typography>
-                                <Sidebar />
 
 				{
                     items.map(item => (
@@ -110,7 +101,7 @@ export const Vegetarian = () =>
                                 <IconButton aria-label="add to favorites">
                                     <FavoriteIcon />
                                 </IconButton>
-                                <IconButton aria-label="share"  href={item.originalURL} target="_blank" rel="noopener noreferrer"  onClick = {handleClick}>
+                                <IconButton aria-label="share">
                                     <ShareIcon />
                                 </IconButton>
                                 <IconButton
