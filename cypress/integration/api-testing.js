@@ -62,7 +62,7 @@ describe('API takes an obj and adds it to the DB', () => {
 
         let newRecipe = {};
 
-        it('GIVEN My user object has valid fields (name and ingredients)', () => {
+        it('GIVEN My user object has valid fields (name, ingredients, steps)', () => {
             newRecipe = {
                 name: 'chicken ',
                 ingredients: 'One chicken only'

@@ -58,11 +58,11 @@ export const Keto = () =>
     const [items, setItems] = useState([]);
 
     const fetchItems = async () => {
-        const data = await fetch('/ketorecipes');
+        const data = await fetch('https://r-ez-ipe-api.herokuapp.com/ketorecipes');
         const items = await data.json();
         setItems(items);
     };
-    const [ setAnchorEl] = React.useState(null);
+    const [setAnchorEl] = React.useState(null);
 
     const handleClick = (event) => {
         setAnchorEl(event.currentTarget);

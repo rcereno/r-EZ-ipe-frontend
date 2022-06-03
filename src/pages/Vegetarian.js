@@ -50,7 +50,7 @@ const useStyles = makeStyles((theme) => ({
 
 export const Vegetarian = () =>
  {
-    const [ setAnchorEl] = React.useState(null);
+    const [setAnchorEl] = React.useState(null);
 
     const handleClick = (event) => {
         setAnchorEl(event.currentTarget);
@@ -66,7 +66,7 @@ export const Vegetarian = () =>
     const [items, setItems] = useState([]);
 
     const fetchItems = async () => {
-        const data = await fetch('/vegetarianrecipes');
+        const data = await fetch('https://r-ez-ipe-api.herokuapp.com/vegetarianrecipes');
         const items = await data.json();
         setItems(items);
     };
