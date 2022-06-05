@@ -16,7 +16,7 @@ npm install @mui/material @emotion/react @emotion/styled
 npm install @mui/material @mui/styled-engine-sc styled-components
 npm install @material-ui/icons
 run backend with:
-npm run server
+npm start
 run frontend with:
 npm start
 Update the frontend/package.json with the proxy:

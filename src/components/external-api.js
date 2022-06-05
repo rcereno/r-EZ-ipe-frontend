@@ -79,4 +79,3 @@ const ExternalApi = () => {
 };
 
 export default ExternalApi;
-

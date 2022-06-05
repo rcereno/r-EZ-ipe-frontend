@@ -1,11 +1,11 @@
 // import logo from './logo.svg';
-import './App.css';
-import Nav from './components/Nav';
-import Home from './components/Home';
-import Recipe from './components/Recipe';
-import Ingredient from './components/Ingredient';
-import Register from './components/easyRegister';
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import "./App.css";
+import Nav from "./components/Nav";
+import Home from "./components/Home";
+import Recipe from "./components/Recipe";
+import Ingredient from "./components/Ingredient";
+import Register from "./components/easyRegister";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import { ProteinBased } from "./pages/ProteinBased";
 import { Vegan } from "./pages/Vegan";
@@ -21,25 +21,23 @@ import Profile from "./pages/profile";
 function App() {
   return (
     <Router>
-      
       <div className="App">
-          <Nav />
-          <Switch>
+        <Nav />
+        <Switch>
           <Route path="/" exact component={Home} />
-            <Route path="/recipes" exact component={Recipe} />
-            <Route path="/ingredients" exact component={Ingredient} />
-            <Route path="/proteinrecipes" exact component={ProteinBased} />
-            <Route path="/vegetarianrecipes" exact component={Vegetarian} />
-            <Route path="/veganrecipes" exact component={Vegan} />
-            <Route path="/ketorecipes" exact component={Keto} />
-            <Route path="/paleorecipes" exact component={Paleo} />
-            <Route path="/quickeasyrecipes" exact component={QuickEasy} />
-            <Route path="/lowbudgetrecipes" exact component={LowBudget} />
-            <Route path="/lessthanfiverecipes" exact component={LessThanFive} />
-            <Route path="/seafoodrecipes" exact component={Seafood} />
-            <Route path="/login" exact component={Register} />
-            <Route path="/profile" component={Profile}/>
-
+          <Route path="/recipes" exact component={Recipe} />
+          <Route path="/ingredients" exact component={Ingredient} />
+          <Route path="/proteinrecipes" exact component={ProteinBased} />
+          <Route path="/vegetarianrecipes" exact component={Vegetarian} />
+          <Route path="/veganrecipes" exact component={Vegan} />
+          <Route path="/ketorecipes" exact component={Keto} />
+          <Route path="/paleorecipes" exact component={Paleo} />
+          <Route path="/quickeasyrecipes" exact component={QuickEasy} />
+          <Route path="/lowbudgetrecipes" exact component={LowBudget} />
+          <Route path="/lessthanfiverecipes" exact component={LessThanFive} />
+          <Route path="/seafoodrecipes" exact component={Seafood} />
+          <Route path="/login" exact component={Register} />
+          <Route path="/profile" component={Profile} />
         </Switch>
       </div>
     </Router>
