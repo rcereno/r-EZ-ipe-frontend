@@ -23,6 +23,7 @@ npm i helmet
 
 
 npm i dotenv
+  env file must be configured so that front end and backend match and link with auth0 
 npm install @mui/material @emotion/react @emotion/styled
 npm install @mui/material @mui/styled-engine-sc styled-components
 npm install @material-ui/icons
