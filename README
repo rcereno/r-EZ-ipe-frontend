@@ -3,6 +3,9 @@ cd frontend
 npx create-react-app frontend
 package:
 npm install react-router-dom
+npm install @auth0/auth0-react
+npm install express-jwt
+
 
 to initialize the Node backend:
 cd backend
@@ -11,6 +14,14 @@ packages:
 npm install --save-dev nodemon
 npm install express body-parser concurrently
 npm install --save mongoose
+npm install @auth0/auth0-react
+npm install express-jwt
+npm install --save jwks-rsa
+npm install react-jwt
+npm i express-openid-connect
+npm i helmet
+
+
 npm i dotenv
 npm install @mui/material @emotion/react @emotion/styled
 npm install @mui/material @mui/styled-engine-sc styled-components
