@@ -133,7 +133,7 @@ function Recipe() {
           </Box>
           <form method="POST" action="/addRecipe">
             <div class="input-group justify-content-center">
-              <div class="input-group-prepend"></div>
+              
               <div class="input-group-prepend">
                 <input
                   type="text"

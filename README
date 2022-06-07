@@ -1,3 +1,14 @@
+Testing front end:
+Cypress-
+        npm start on front and back end
+        ./node_modules/.bin/cypress open
+        Navigate to api-testing.js or e2e-testing.js
+npm test a
+
+Testing the back end:
+npm test
+
+
 to initialize React App:
 cd frontend
 npx create-react-app frontend

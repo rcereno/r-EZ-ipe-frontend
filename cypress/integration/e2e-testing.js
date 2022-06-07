@@ -27,11 +27,11 @@ describe("Add recipe", () => {
         //Or
         //cy.contains('Submit').click()
       });
-      cy.wait("@addRecipe");
+      //cy.wait("@addRecipe");
     });
 
     it("THEN a new user is added to the table with the given recipe name and ingredients", () => {
-      cy.visit("http://localhost:3000/recipes");
+      cy.get('input:valid')
     });
   });
 
@@ -47,11 +47,11 @@ describe("Add recipe", () => {
         //Or
         //cy.contains('Submit').click()
       });
-      cy.wait("@addRecipe");
+      // cy.wait("@addRecipe");
     });
 
-    it("THEN the user is redirected to the recipes page without any changes", () => {
-      cy.visit("http://localhost:3000/recipes");
+    it("THEN the user is told that the field is required", () => {
+      cy.get('input:invalid')
     });
   });
 });
