@@ -6,7 +6,7 @@ Cypress-
 npm test a
 
 Testing the back end:
-npm test
+npm test (in the routes folder)
 
 
 to initialize React App:
